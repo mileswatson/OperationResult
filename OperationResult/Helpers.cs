@@ -45,5 +45,9 @@ namespace OperationResult
             if (item is null) throw new NullReferenceException();
             return item;
         }
+
+        internal static T ThrowException<T>() {
+            throw new NullReferenceException();
+        }
     }
 }

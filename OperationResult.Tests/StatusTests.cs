@@ -1,5 +1,7 @@
-﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using System;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static OperationResult.Helpers;
+using static OperationResult.Tests.Helpers;
 
 namespace OperationResult.Tests
 {
@@ -60,7 +62,7 @@ namespace OperationResult.Tests
             Assert.IsTrue(res1);
             Assert.IsTrue(res1.IsSuccess);
             Assert.IsFalse(res1.IsError);
-            Assert.IsNull(res1.Error);
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res1.Error));
             
             var res2 = GetStatusOrError(2);
 
@@ -103,7 +105,7 @@ namespace OperationResult.Tests
             Assert.IsTrue(res1);
             Assert.IsTrue(res1.IsSuccess);
             Assert.IsFalse(res1.IsError);
-            Assert.IsNull(res1.Error);
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res1.Error));
 
             var res2 = GetStatusOrMultipleErrors(2);
 

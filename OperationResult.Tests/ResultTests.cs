@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using static OperationResult.Helpers;
+using static OperationResult.Tests.Helpers;
 
 namespace OperationResult.Tests
 {
@@ -42,7 +43,7 @@ namespace OperationResult.Tests
             Assert.IsFalse(res3);
             Assert.IsFalse(res3.IsSuccess);
             Assert.IsTrue(res3.IsError);
-            Assert.ThrowsException<NullReferenceException>(() => Console.WriteLine(res3.Value) );
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res3.Value) );
         }
 
         [TestMethod]
@@ -82,7 +83,7 @@ namespace OperationResult.Tests
             Assert.IsTrue(res1.IsSuccess);
             Assert.IsFalse(res1.IsError);
             Assert.AreEqual(res1.Value, 1);
-            Assert.ThrowsException<NullReferenceException>(() => Console.WriteLine(res1.Error));
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res1.Error));
 
             var res2 = GetResultOrError(2);
 
@@ -90,14 +91,14 @@ namespace OperationResult.Tests
             Assert.IsTrue(res2.IsSuccess);
             Assert.IsFalse(res2.IsError);
             Assert.AreEqual(res2.Value, 2);
-            Assert.ThrowsException<NullReferenceException>(() => Console.WriteLine(res2.Error));
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res2.Error));
 
             var res3 = GetResultOrError(3);
 
             Assert.IsFalse(res3);
             Assert.IsFalse(res3.IsSuccess);
             Assert.IsTrue(res3.IsError);
-            Assert.ThrowsException<NullReferenceException>(() => Console.WriteLine(res3.Value));
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res3.Value));
             Assert.AreEqual(res3.Error, "Invalid Operation");
         }
 
@@ -161,7 +162,7 @@ namespace OperationResult.Tests
             Assert.IsTrue(res1.IsSuccess);
             Assert.IsFalse(res1.IsError);
             Assert.AreEqual(res1.Value, 1);
-            Assert.ThrowsException<NullReferenceException>(() => Console.WriteLine(res1.Error));
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res1.Error));
 
             var res2 = GetResultOrMultipleErrors(2);
 
@@ -169,7 +170,7 @@ namespace OperationResult.Tests
             Assert.IsTrue(res2.IsSuccess);
             Assert.IsFalse(res2.IsError);
             Assert.AreEqual(res2.Value, 2);
-            Assert.ThrowsException<NullReferenceException>(() => Console.WriteLine(res2.Error));
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res2.Error));
 
             var res3 = GetResultOrMultipleErrors(3);
 
@@ -177,7 +178,7 @@ namespace OperationResult.Tests
             Assert.IsFalse(res3.IsSuccess);
             Assert.IsTrue(res3.IsError);
             Assert.IsTrue(res3.HasError<int>());
-            Assert.ThrowsException<NullReferenceException>(() => Console.WriteLine(res3.Value));
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res3.Value));
             Assert.AreEqual(res3.Error, 404);
             Assert.AreEqual(res3.GetError<int>(), 404);
 
@@ -187,7 +188,7 @@ namespace OperationResult.Tests
             Assert.IsFalse(res4.IsSuccess);
             Assert.IsTrue(res4.IsError);
             Assert.IsTrue(res4.HasError<string>());
-            Assert.ThrowsException<NullReferenceException>(() => Console.WriteLine(res4.Value));
+            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res4.Value));
             Assert.AreEqual(res4.Error, "Invalid Operation");
             Assert.AreEqual(res4.GetError<string>(), "Invalid Operation");
         }

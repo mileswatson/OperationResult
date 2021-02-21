@@ -1,4 +1,5 @@
 ﻿using OperationResult.Tags;
+using static OperationResult.Helpers;
 
 namespace OperationResult
 {
@@ -8,7 +9,6 @@ namespace OperationResult
     public struct Status
     {
         private readonly bool _isSuccess;
-
         public bool IsSuccess => _isSuccess;
         public bool IsError => !_isSuccess;
 
@@ -42,10 +42,12 @@ namespace OperationResult
     /// </summary>
     /// <typeparam name="TError">Type of Error field</typeparam>
     public struct Status<TError>
+        where TError : notnull
     {
         private readonly bool _isSuccess;
 
-        public readonly TError Error;
+        private readonly TError? _error;
+        public TError Error => IsError ? GuardNull(_error) : ThrowException<TError>();
 
         public bool IsSuccess => _isSuccess;
         public bool IsError => !_isSuccess;
@@ -53,13 +55,13 @@ namespace OperationResult
         private Status(bool isSuccess)
         {
             _isSuccess = isSuccess;
-            Error = default(TError);
+            _error = default(TError);
         }
 
         private Status(TError error)
         {
             _isSuccess = false;
-            Error = error;
+            _error = error;
         }
 
         public static implicit operator bool(Status<TError> status)
@@ -86,13 +88,15 @@ namespace OperationResult
     /// <typeparam name="TError1">Type of first Error</typeparam>
     /// <typeparam name="TError2">Type of second Error</typeparam>
     public struct Status<TError1, TError2>
+        where TError1 : notnull
+        where TError2 : notnull
     {
         private readonly bool _isSuccess;
-
-        public readonly object Error;
-
         public bool IsSuccess => _isSuccess;
         public bool IsError => !_isSuccess;
+
+        private readonly object? _error;
+        public object Error => IsError ? GuardNull(_error) : ThrowException<object>();
 
         public bool HasError<TError>() => Error is TError;
         public TError GetError<TError>() => (TError)Error;
@@ -100,13 +104,13 @@ namespace OperationResult
         private Status(bool isSuccess)
         {
             _isSuccess = isSuccess;
-            Error = null;
+            _error = null;
         }
 
         private Status(object error)
         {
             _isSuccess = false;
-            Error = error;
+            _error = error;
         }
 
         public static implicit operator bool(Status<TError1, TError2> status)
@@ -140,13 +144,16 @@ namespace OperationResult
     /// <typeparam name="TError2">Type of second Error</typeparam>
     /// <typeparam name="TError3">Type of third Error</typeparam>
     public struct Status<TError1, TError2, TError3>
+        where TError1 : notnull
+        where TError2 : notnull
+        where TError3 : notnull
     {
         private readonly bool _isSuccess;
-
-        public readonly object Error;
-
         public bool IsSuccess => _isSuccess;
         public bool IsError => !_isSuccess;
+
+        private readonly object? _error;
+        public object Error => IsError ? GuardNull(_error) : ThrowException<object>();
 
         public bool HasError<TError>() => Error is TError;
         public TError GetError<TError>() => (TError)Error;
@@ -154,13 +161,13 @@ namespace OperationResult
         private Status(bool isSuccess)
         {
             _isSuccess = isSuccess;
-            Error = null;
+            _error = null;
         }
 
         private Status(object error)
         {
             _isSuccess = false;
-            Error = error;
+            _error = error;
         }
 
         public static implicit operator bool(Status<TError1, TError2, TError3> status)
