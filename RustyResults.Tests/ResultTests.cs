@@ -1,9 +1,9 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using static OperationResult.Helpers;
-using static OperationResult.Tests.Helpers;
+using static RustyResults.Helpers;
+using static RustyResults.Tests.Helpers;
 
-namespace OperationResult.Tests
+namespace RustyResults.Tests
 {
     [TestClass]
     public class ResultTests

@@ -1,4 +1,4 @@
-﻿namespace OperationResult.Tags
+﻿namespace RustyResults.Tags
 {
     public struct SuccessTag { }
 

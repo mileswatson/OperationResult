@@ -1,7 +1,7 @@
 ﻿using System;
-using OperationResult.Tags;
+using RustyResults.Tags;
 
-namespace OperationResult
+namespace RustyResults
 {
     public static class Helpers
     {

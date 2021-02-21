@@ -1,6 +1,6 @@
 ﻿using BenchmarkDotNet.Running;
 
-namespace OperationResult.Benchmarks
+namespace RustyResults.Benchmarks
 {
     class Program
     {

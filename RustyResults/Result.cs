@@ -1,8 +1,8 @@
 ﻿using System;
-using OperationResult.Tags;
-using static OperationResult.Helpers;
+using RustyResults.Tags;
+using static RustyResults.Helpers;
 
-namespace OperationResult
+namespace RustyResults
 {
     /// <summary>
     /// Result of operation (without Error field)
