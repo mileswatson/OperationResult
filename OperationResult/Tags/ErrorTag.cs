@@ -2,7 +2,7 @@
 {
     public struct ErrorTag { }
 
-    public struct ErrorTag<TError>
+    public struct ErrorTag<TError> where TError : notnull
     {
         internal readonly TError Error;
 

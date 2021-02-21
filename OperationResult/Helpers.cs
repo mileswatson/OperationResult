@@ -1,4 +1,5 @@
-﻿using OperationResult.Tags;
+﻿using System;
+using OperationResult.Tags;
 
 namespace OperationResult
 {
@@ -17,7 +18,7 @@ namespace OperationResult
         /// <summary>
         /// Create "Success" Status or Result
         /// </summary>
-        public static SuccessTag<TResult> Ok<TResult>(TResult result)
+        public static SuccessTag<TResult> Ok<TResult>(TResult result) where TResult : notnull
         {
             return new SuccessTag<TResult>(result);
         }
@@ -35,9 +36,14 @@ namespace OperationResult
         /// <summary>
         /// Create "Error" Status or Result
         /// </summary>
-        public static ErrorTag<TError> Error<TError>(TError error)
+        public static ErrorTag<TError> Error<TError>(TError error) where TError : notnull
         {
             return new ErrorTag<TError>(error);
+        }
+
+        internal static T GuardNull<T>(T? item) {
+            if (item is null) throw new NullReferenceException();
+            return item;
         }
     }
 }

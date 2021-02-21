@@ -2,7 +2,7 @@
 {
     public struct SuccessTag { }
 
-    public struct SuccessTag<TResult>
+    public struct SuccessTag<TResult> where TResult : notnull
     {
         internal readonly TResult Value;
 

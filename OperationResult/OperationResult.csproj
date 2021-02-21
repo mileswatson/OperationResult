@@ -19,6 +19,7 @@
     <PackageTags>Rust Error Functional Result Status</PackageTags>
     <Description>Common types and helpers for represent result of some operation.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Nullable>Enable</Nullable>
   </PropertyGroup>
   
   <ItemGroup>
