@@ -12,6 +12,9 @@
 */obj
 */BenchmarkDotNet.Artifacts
 
+# Allow icon
+!RustyResults/icon.png
+
 # Allow README, gitignore, LICENSE, and sln
 !README.md
 !.gitignore
