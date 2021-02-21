@@ -10,7 +10,7 @@
     <PackageVersion>0.2.0</PackageVersion>
     <PackageId>RustyResults</PackageId>
     <Authors>Miles Watson, Dmitry Panyushkin</Authors>
-    <PackageIcon>icon_48x48.png</PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Owners>mileswatson</Owners>
     <RepositoryUrl>https://github.com/mileswatson/RustyResults</RepositoryUrl>
@@ -26,7 +26,7 @@
   </PropertyGroup>
   
   <ItemGroup>
-    <None Include="icon_48x48.png" Pack="true" PackagePath="\" />
+    <None Include="icon.png" Pack="true" PackagePath="\" />
   </ItemGroup>
   
 </Project>
