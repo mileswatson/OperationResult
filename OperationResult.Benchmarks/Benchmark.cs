@@ -57,13 +57,13 @@ namespace OperationResult.Benchmarks
             return acc;
         }
 
-        private Tuple<int, string> GetTuple(int arg)
+        private Tuple<int, string?> GetTuple(int arg)
         {
             if (arg < SuccessRate)
             {
-                return Tuple.Create(arg, (string)null);
+                return Tuple.Create(arg, (string?)null);
             }
-            return Tuple.Create(0, "Invalid Operation");
+            return Tuple.Create(0, (string?)"Invalid Operation");
         }
 
         [Benchmark(Description = "Tuple<TResult, TError> Operation()")]
@@ -81,7 +81,7 @@ namespace OperationResult.Benchmarks
             return acc;
         }
 
-        private bool GetOutParameters(int arg, out int value, out string error)
+        private bool GetOutParameters(int arg, out int value, out string? error)
         {
             if (arg < SuccessRate)
             {
@@ -101,7 +101,7 @@ namespace OperationResult.Benchmarks
             for (int i = 0; i < 100; i++)
             {
                 int value;
-                string error;
+                string? error;
                 if (GetOutParameters(i, out value, out error))
                 {
                     acc += value;

@@ -250,3 +250,6 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+# Benchmarks
+OperationResult.Benchmarks/BenchmarkDotNet.Artifacts/

@@ -274,20 +274,20 @@ public static class Helpers
 ## Benchmarks
 A performance comparsion with other error handling techniques
 
-|                                                Method | SuccessRate |         Mean |      StdDev |  Gen 0 | Allocated |
-|------------------------------------------------------ |------------ |------------- |------------ |------- |---------- |
-|                     `TResult Operation() + Exception` |          50 | 1 068 491 ns | 2 754.82 ns |      - |   10.4 kB |
-|             **`Result<TResult, TError> Operation()`** |      **50** | **2 025 ns** | **0.67 ns** |  **-** |   **0 B** |
-|                  `Tuple<TResult, TError> Operation()` |          50 |       957 ns |     1.71 ns | 0.9669 |    1.6 kB |
-| `bool Operation(out TResult value, out TError error)` |          50 |       650 ns |     0.15 ns |      - |       0 B |
-|                                                       |             |              |             |        |           |
-|                     `TResult Operation() + Exception` |          90 |   212 520 ns |   529.55 ns |      - |   2.08 kB |
-|             **`Result<TResult, TError> Operation()`** |      **90** | **1 995 ns** | **1.86 ns** |  **-** |   **0 B** |
-|                  `Tuple<TResult, TError> Operation()` |          90 |       815 ns |     1.18 ns | 0.9669 |    1.6 kB |
-| `bool Operation(out TResult value, out TError error)` |          90 |       463 ns |     0.41 ns |      - |       0 B |
-|                                                       |             |              |             |        |           |
-|                     `TResult Operation() + Exception` |          99 |    22 069 ns |    52.44 ns |      - |     208 B |
-|             **`Result<TResult, TError> Operation()`** |      **99** | **1 989 ns** | **2.84 ns** |  **-** |   **0 B** |
-|                  `Tuple<TResult, TError> Operation()` |          99 |       778 ns |     1.31 ns | 0.9669 |    1.6 kB |
-| `bool Operation(out TResult value, out TError error)` |          99 |       430 ns |     0.34 ns |      - |       0 B |
+|                                                Method | SuccessRate |         Mean |       Error |      StdDev |       Median |
+|------------------------------------------------------ |------------ |-------------:|------------:|------------:|-------------:|
+|                     `TResult Operation() + Exception` |          50 | 381,462.3 ns | 2,955.35 ns | 2,619.84 ns | 381,040.1 ns |
+|             **`Result<TResult, TError> Operation()`** |          50 |     332.4 ns |     2.67 ns |     2.37 ns |     332.1 ns |
+|                  `Tuple<TResult, TError> Operation()` |          50 |     599.2 ns |    31.03 ns |    91.48 ns |     632.1 ns |
+| `bool Operation(out TResult value, out TError error)` |          50 |     277.7 ns |     1.92 ns |     1.70 ns |     277.6 ns |
+|                                                       |             |              |             |             |              |
+|                     `TResult Operation() + Exception` |          90 |  76,696.7 ns |   715.91 ns |   669.67 ns |  76,633.8 ns |
+|             **`Result<TResult, TError> Operation()`** |          90 |     277.6 ns |     1.81 ns |     1.69 ns |     277.4 ns |
+|                  `Tuple<TResult, TError> Operation()` |          90 |     663.5 ns |    13.15 ns |    30.74 ns |     677.3 ns |
+| `bool Operation(out TResult value, out TError error)` |          90 |     232.5 ns |     1.05 ns |     0.94 ns |     232.4 ns |
+|                                                       |             |              |             |             |              |
+|                     `TResult Operation() + Exception` |          99 |   7,891.5 ns |    82.96 ns |    77.60 ns |   7,883.9 ns |
+|             **`Result<TResult, TError> Operation()`** |          99 |     261.5 ns |     2.10 ns |     1.86 ns |     261.5 ns |
+|                  `Tuple<TResult, TError> Operation()` |          99 |     647.5 ns |    12.81 ns |    15.25 ns |     651.5 ns |
+| `bool Operation(out TResult value, out TError error)` |          99 |     208.4 ns |     1.22 ns |     1.02 ns |     208.4 ns |
 
