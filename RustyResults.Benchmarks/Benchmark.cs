@@ -1,8 +1,8 @@
 ﻿using System;
 using BenchmarkDotNet.Attributes;
-using static OperationResult.Helpers;
+using static RustyResults.Helpers;
 
-namespace OperationResult.Benchmarks
+namespace RustyResults.Benchmarks
 {
     public class Benchmark
     {

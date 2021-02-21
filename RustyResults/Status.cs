@@ -1,7 +1,7 @@
-﻿using OperationResult.Tags;
-using static OperationResult.Helpers;
+﻿using RustyResults.Tags;
+using static RustyResults.Helpers;
 
-namespace OperationResult
+namespace RustyResults
 {
     /// <summary>
     /// Status of operation (without Value and Error fields)

@@ -2,18 +2,18 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>CSharp.OperationResult</AssemblyName>
+    <AssemblyName>CSharp.RustyResults</AssemblyName>
   </PropertyGroup>
   
   <PropertyGroup>
     <PackOnBuild>true</PackOnBuild>
     <PackageVersion>0.2.0</PackageVersion>
-    <PackageId>CSharp.OperationResult</PackageId>
+    <PackageId>CSharp.RustyResults</PackageId>
     <Authors>Dmitry Panyushkin</Authors>
     <PackageIcon>icon_48x48.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Owners>gnaeus</Owners>
-    <RepositoryUrl>https://github.com/gnaeus/OperationResult</RepositoryUrl>
+    <RepositoryUrl>https://github.com/gnaeus/RustyResults</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Summary>Rust-style error handling for C#</Summary>
     <PackageTags>Rust Error Functional Result Status</PackageTags>

@@ -1,11 +1,11 @@
 ﻿using System.Reflection;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("OperationResult.Benchmarks")]
+[assembly: AssemblyTitle("RustyResults.Benchmarks")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("OperationResult.Benchmarks")]
+[assembly: AssemblyProduct("RustyResults.Benchmarks")]
 [assembly: AssemblyCopyright("Copyright © Dmitry Panyushkin 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

@@ -12,7 +12,7 @@
     </ItemGroup>
 
     <ItemGroup>
-		<ProjectReference Include="..\OperationResult\OperationResult.csproj" />
+		<ProjectReference Include="..\RustyResults\RustyResults.csproj" />
 	</ItemGroup>
 
 </Project>

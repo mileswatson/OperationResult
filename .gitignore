@@ -252,4 +252,4 @@ paket-files/
 *.sln.iml
 
 # Benchmarks
-OperationResult.Benchmarks/BenchmarkDotNet.Artifacts/
+RustyResults.Benchmarks/BenchmarkDotNet.Artifacts/

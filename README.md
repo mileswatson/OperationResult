@@ -1,12 +1,12 @@
 # RustyResults
 __Rust-style error handling for C#__
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gnaeus/OperationResult/master/LICENSE)
-[![NuGet version](https://img.shields.io/nuget/v/CSharp.OperationResult.svg)](https://www.nuget.org/packages/CSharp.OperationResult)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mileswatson/RustyResults/master/LICENSE)
+[![NuGet version](https://img.shields.io/nuget/v/CSharp.RustyResults.svg)](https://www.nuget.org/packages/CSharp.RustyResults)
 
 ```cs
-using OperationResult;
-using static OperationResult.Helpers;
+using RustyResults;
+using static RustyResults.Helpers;
 
 public Result<double, string> SqrtOperation(double argument)
 {
@@ -99,8 +99,8 @@ public struct Result<TResult, TError>
 
 Also `Result` has shorthand implicit conversion from `TResult` type
 ```cs
-using OperationResult;
-using static OperationResult.Helpers;
+using RustyResults;
+using static RustyResults.Helpers;
 
 public async Task<Result<string, HttpStatusCode>> DownloadPage(string url)
 {
