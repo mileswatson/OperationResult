@@ -2,28 +2,31 @@
 
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>CSharp.RustyResults</AssemblyName>
+    <AssemblyName>RustyResults</AssemblyName>
   </PropertyGroup>
   
   <PropertyGroup>
     <PackOnBuild>true</PackOnBuild>
     <PackageVersion>0.2.0</PackageVersion>
-    <PackageId>CSharp.RustyResults</PackageId>
-    <Authors>Dmitry Panyushkin</Authors>
+    <PackageId>RustyResults</PackageId>
+    <Authors>Miles Watson, Dmitry Panyushkin</Authors>
     <PackageIcon>icon_48x48.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Owners>gnaeus</Owners>
-    <RepositoryUrl>https://github.com/gnaeus/RustyResults</RepositoryUrl>
+    <Owners>mileswatson</Owners>
+    <RepositoryUrl>https://github.com/mileswatson/RustyResults</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <Summary>Rust-style error handling for C#</Summary>
-    <PackageTags>Rust Error Functional Result Status</PackageTags>
-    <Description>Common types and helpers for represent result of some operation.</Description>
+    <PackageTags>Rust Error Functional Result Status Exception Monad</PackageTags>
+    <Description>Rust-style results to allow more robust error handling.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Nullable>Enable</Nullable>
+    <Company />
+    <Version>0.2.0</Version>
+    <Product>Rusty Results</Product>
   </PropertyGroup>
   
   <ItemGroup>
-    <None Include="icon_48x48.png" Pack="true" PackagePath="\"/>
+    <None Include="icon_48x48.png" Pack="true" PackagePath="\" />
   </ItemGroup>
   
 </Project>
