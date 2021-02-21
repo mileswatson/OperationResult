@@ -2,7 +2,7 @@
 __Rust-style error handling for C#__
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mileswatson/RustyResults/master/LICENSE)
-[![NuGet version](https://img.shields.io/nuget/v/CSharp.RustyResults.svg)](https://www.nuget.org/packages/CSharp.RustyResults)
+[![NuGet version](https://img.shields.io/nuget/v/CSharp.RustyResults.svg)](https://www.nuget.org/packages/RustyResults)
 
 ```cs
 using RustyResults;
@@ -34,25 +34,25 @@ public void Method()
 ```
 
 ---
-* [__`Result<TResult>`__](#operation-result-result)
+* [__`Result<TResult>`__](#rusty-results-result)
 
-* [__`Result<TResult, TError>`__](#operation-result-result-error)
+* [__`Result<TResult, TError>`__](#rusty-results-result-error)
 
-* [__`Result<TResult, TError1, TError2, ...>`__](#operation-result-result-multiple-errors)
+* [__`Result<TResult, TError1, TError2, ...>`__](#rusty-results-result-multiple-errors)
 
-* [__`Status`__](#operation-result-status)
+* [__`Status`__](#rusty-results-status)
 
-* [__`Status<TError>`__](#operation-result-status-error)
+* [__`Status<TError>`__](#rusty-results-status-error)
 
-* [__`Status<TError, TError2, ...>`__](#operation-result-status-multiple-errors)
+* [__`Status<TError, TError2, ...>`__](#rusty-results-status-multiple-errors)
 
-* [__`Helpers`__](#operation-result-helpers)
+* [__`Helpers`__](#rusty-results-helpers)
   - `Ok<>()`
   - `Error<>()`
   - `Ok<TResult>(TResult result)`
   - `Error<TError>(TError error)`
 
-### <a name="operation-result-result"></a>`Result<TResult>`
+### <a name="rusty-results-result"></a>`Result<TResult>`
 Result of some method when there is no `TError` type defined
 ```cs
 public struct Result<TResult>
@@ -79,7 +79,7 @@ public Result<uint> Square(uint argument)
 }
 ```
 
-### <a name="operation-result-result-error"></a>`Result<TResult, TError>`
+### <a name="rusty-results-result-error"></a>`Result<TResult, TError>`
 Either Result of some method or Error from this method
 ```cs
 public struct Result<TResult, TError>
@@ -117,7 +117,7 @@ public async Task<Result<string, HttpStatusCode>> DownloadPage(string url)
 }
 ```
 
-### <a name="operation-result-result-multiple-errors"></a>`Result<TResult, TError1, TError2, ...>`
+### <a name="rusty-results-result-multiple-errors"></a>`Result<TResult, TError1, TError2, ...>`
 Either Result of some method or multiple Errors from this method
 ```cs
 public struct Result<TResult, TError1, TError2, ...>
@@ -170,7 +170,7 @@ public void Method()
 }
 ```
 
-### <a name="operation-result-status"></a>`Status`
+### <a name="rusty-results-status"></a>`Status`
 Status of some operation without result when there is no `TError` type defined
 ```cs
 public struct Status
@@ -194,7 +194,7 @@ public Status IsOdd(int value)
 }
 ```
 
-### <a name="operation-result-status-error"></a>`Status<TError>`
+### <a name="rusty-results-status-error"></a>`Status<TError>`
 Status of some operation without result
 ```cs
 public struct Status<TError>
@@ -224,7 +224,7 @@ public Status<string> Validate(string input)
 }
 ```
 
-### <a name="operation-result-status-multiple-errors"></a>`Status<TError1, TError2, ...>`
+### <a name="rusty-results-status-multiple-errors"></a>`Status<TError1, TError2, ...>`
 Status of some operation without result but with multiple Errors from this method
 ```cs
 public struct Status<TError1, TError2, ...>
@@ -260,7 +260,7 @@ public Status<OuterError, InnerError> Outer()
 ```
 <hr>
 
-### <a name="operation-result-helpers"></a>`Helpers`
+### <a name="rusty-results-helpers"></a>`Helpers`
 ```cs
 public static class Helpers
 {
@@ -272,7 +272,7 @@ public static class Helpers
 ```
 
 ## Benchmarks
-A performance comparsion with other error handling techniques
+A performance comparsion with other error handling techniques.
 
 |                                                Method | SuccessRate |         Mean |       Error |      StdDev |       Median |
 |------------------------------------------------------ |------------ |-------------:|------------:|------------:|-------------:|
