@@ -16,7 +16,7 @@ namespace OperationResult
         public bool IsError => !_isSuccess;
 
         private readonly TResult? _value;
-        public TResult Value => IsSuccess ? GuardNull(_value) : throw new NullReferenceException();
+        public TResult Value => IsSuccess ? GuardNull(_value) : ThrowException<TResult>();
 
         private Result(bool isSuccess)
         {
@@ -67,10 +67,10 @@ namespace OperationResult
         public bool IsError => !_isSuccess;
 
         private readonly TResult? _value;
-        public TResult Value => IsSuccess ? GuardNull(_value) : throw new NullReferenceException();
+        public TResult Value => IsSuccess ? GuardNull(_value) : ThrowException<TResult>();
 
         private readonly TError? _error;
-        public TError Error => IsError ? GuardNull(_error) : throw new NullReferenceException();
+        public TError Error => IsError ? GuardNull(_error) : ThrowException<TError>();
 
         private Result(TResult result)
         {
@@ -129,10 +129,10 @@ namespace OperationResult
         public bool IsError => !_isSuccess;
 
         private readonly TResult? _value;
-        public TResult Value => IsSuccess ? GuardNull(_value) : throw new NullReferenceException();
+        public TResult Value => IsSuccess ? GuardNull(_value) : ThrowException<TResult>();
 
         private readonly object? _error;
-        public object Error => IsError ? GuardNull(_error) : throw new NullReferenceException();
+        public object Error => IsError ? GuardNull(_error) : ThrowException<TError1>();
 
         public bool HasError<TError>() => Error is TError;
         public TError GetError<TError>() => (TError)Error;
@@ -201,10 +201,10 @@ namespace OperationResult
         public bool IsError => !_isSuccess;
 
         private readonly TResult? _value;
-        public TResult Value => IsSuccess ? GuardNull(_value) : throw new NullReferenceException();
+        public TResult Value => IsSuccess ? GuardNull(_value) : ThrowException<TResult>();
 
         private readonly object? _error;
-        public object Error => IsError ? GuardNull(_error) : throw new NullReferenceException();
+        public object Error => IsError ? GuardNull(_error) : ThrowException<TError1>();
 
         public bool HasError<TError>() => Error is TError;
         public TError GetError<TError>() => (TError)Error;
