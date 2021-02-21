@@ -7,22 +7,19 @@
   
   <PropertyGroup>
     <PackOnBuild>true</PackOnBuild>
-    <PackageVersion>0.2.0</PackageVersion>
     <PackageId>RustyResults</PackageId>
+    <Version>0.2.1</Version>
+    <Product>Rusty Results</Product>
     <Authors>Miles Watson, Dmitry Panyushkin</Authors>
     <PackageIcon>icon.png</PackageIcon>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <Owners>mileswatson</Owners>
     <RepositoryUrl>https://github.com/mileswatson/RustyResults</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Summary>Rust-style error handling for C#</Summary>
+    <Summary>Rust-style results to allow more robust error handling in C#.</Summary>
     <PackageTags>Rust Error Functional Result Status Exception Monad</PackageTags>
-    <Description>Rust-style results to allow more robust error handling.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Nullable>Enable</Nullable>
-    <Company />
-    <Version>0.2.0</Version>
-    <Product>Rusty Results</Product>
   </PropertyGroup>
   
   <ItemGroup>
