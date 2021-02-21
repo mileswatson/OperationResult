@@ -121,7 +121,7 @@ namespace OperationResult.Tests
         public void TestResultWithErrorDeconstruction()
         {
             int result;
-            string error;
+            string? error;
 
             (result, error) = GetResultOrError(1);
             Assert.AreEqual(result, 1);
