@@ -1,4 +1,4 @@
-# OperationResult
+# RustyResults
 __Rust-style error handling for C#__
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/gnaeus/OperationResult/master/LICENSE)
