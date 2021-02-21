@@ -5,11 +5,12 @@
 # ... but allow directories to be searched
 !*/
 
-# Allow C# files under any folder(s), except /bin and /obj
+# Allow C# files under any folder(s), except bin, obj, and benchmark
 !*/*.csproj
 !**/*.cs
 */bin
 */obj
+*/BenchmarkDotNet.Artifacts
 
 # Allow README, gitignore, LICENSE, and sln
 !README.md
