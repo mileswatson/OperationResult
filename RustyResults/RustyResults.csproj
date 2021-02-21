@@ -3,12 +3,13 @@
   <PropertyGroup>
     <TargetFramework>net5.0</TargetFramework>
     <AssemblyName>RustyResults</AssemblyName>
+    <Nullable>Enable</Nullable>
   </PropertyGroup>
   
   <PropertyGroup>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>RustyResults</PackageId>
-    <Version>0.2.1</Version>
+    <Version>0.2.2</Version>
     <Product>Rusty Results</Product>
     <Authors>Miles Watson, Dmitry Panyushkin</Authors>
     <PackageIcon>icon.png</PackageIcon>
@@ -16,10 +17,9 @@
     <Owners>mileswatson</Owners>
     <RepositoryUrl>https://github.com/mileswatson/RustyResults</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <Summary>Rust-style results to allow more robust error handling in C#.</Summary>
+    <Description>Rust-style results to allow more robust error handling in C#.</Description>
     <PackageTags>Rust Error Functional Result Status Exception Monad</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Nullable>Enable</Nullable>
   </PropertyGroup>
   
   <ItemGroup>
