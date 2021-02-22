@@ -9,7 +9,7 @@
   <PropertyGroup>
     <PackOnBuild>true</PackOnBuild>
     <PackageId>RustyResults</PackageId>
-    <Version>0.2.2</Version>
+    <Version>0.2.3</Version>
     <Product>Rusty Results</Product>
     <Authors>Miles Watson, Dmitry Panyushkin</Authors>
     <PackageIcon>icon.png</PackageIcon>

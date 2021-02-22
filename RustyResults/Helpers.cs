@@ -47,7 +47,7 @@ namespace RustyResults
         }
 
         internal static T ThrowException<T>() {
-            throw new NullReferenceException();
+            throw new InvalidOperationException("You must check before attempting to access Value or Error!");
         }
     }
 }
