@@ -1,5 +1,5 @@
 # RustyResults
-__Rust-style error handling for C#__
+__Rust-style error handling in C#, with support for nullable annotations.__
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mileswatson/RustyResults/master/LICENSE)
 [![NuGet version](https://img.shields.io/nuget/v/RustyResults.svg)](https://www.nuget.org/packages/RustyResults)
