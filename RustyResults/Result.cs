@@ -1,5 +1,4 @@
-﻿using System;
-using RustyResults.Tags;
+﻿using RustyResults.Tags;
 using static RustyResults.Helpers;
 
 namespace RustyResults
