@@ -2,7 +2,7 @@
 __Rust-style error handling for C#__
 
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mileswatson/RustyResults/master/LICENSE)
-[![NuGet version](https://img.shields.io/nuget/v/CSharp.RustyResults.svg)](https://www.nuget.org/packages/RustyResults)
+[![NuGet version](https://img.shields.io/nuget/v/RustyResults.svg)](https://www.nuget.org/packages/RustyResults)
 
 ```cs
 using RustyResults;
