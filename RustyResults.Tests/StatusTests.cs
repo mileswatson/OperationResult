@@ -62,7 +62,7 @@ namespace RustyResults.Tests
             Assert.IsTrue(res1);
             Assert.IsTrue(res1.IsSuccess);
             Assert.IsFalse(res1.IsError);
-            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res1.Error));
+            Assert.ThrowsException<InvalidOperationException>(() => DoNothing(res1.Error));
             
             var res2 = GetStatusOrError(2);
 
@@ -105,7 +105,7 @@ namespace RustyResults.Tests
             Assert.IsTrue(res1);
             Assert.IsTrue(res1.IsSuccess);
             Assert.IsFalse(res1.IsError);
-            Assert.ThrowsException<NullReferenceException>(() => DoNothing(res1.Error));
+            Assert.ThrowsException<InvalidOperationException>(() => DoNothing(res1.Error));
 
             var res2 = GetStatusOrMultipleErrors(2);
 
